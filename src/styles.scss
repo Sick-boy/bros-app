@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+$type-font-primary: "Roboto", Arial, sans-serif;
+$type-font-secondary: "Montserrat", sans-serif;
+$type-color-primary: #1d1d1d;
+
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    color: $type-color-primary;
+}
+
+#headerBar {
+    box-shadow: 0 0 10px rgba(0,0,0,.6);
+    background-color: #f2f9f7;
+
+    #header {
+        display: flex;
+        align-items: center;
+        height: 40px;
+    }
+    
+    #navBar {
+        display: inline-flex;
+        margin: 0;
+        list-style: none;
+
+        li {
+            font-family: $type-font-primary;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+    }
+}
+
+.centrifier {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: #000;
+    text-decoration: none;
+}
