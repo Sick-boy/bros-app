@@ -6,12 +6,20 @@
     background-size: auto, cover;
     position: relative;
 
-    h1 {
-        @include header-text;
-        font-size: 80px;
+    #welcome-wrapper {
         position: absolute;
         top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
+
+        h1 {
+            @include header-text;
+            font-size: 74px;
+        }
+        span.red {
+            color: $type-color-highlight;
+        }
     }
+   
 }
