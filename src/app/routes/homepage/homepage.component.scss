@@ -7,15 +7,11 @@
     position: relative;
 
     h1 {
-        font-family: $type-font-secondary;
-        display: block;
+        @include header-text;
+        font-size: 80px;
         position: absolute;
         top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 85px;
-        color: $type-color-inverse;
-        text-shadow: -4px 4px 0px #ff6161;
-        margin: 0;
     }
 }

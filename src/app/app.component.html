@@ -5,12 +5,19 @@
               <img src="/assets/img/logo.png" alt="logo" width="160">
             </a>
             <ul id="navBar">
-                <li id="home">Home</li>
-                <li id="social">Social</li>
+                <li id="/home" routerLink="home">Home</li>
+                <li id="/social" routerLink="social">Social</li>
                 <li id="gallery">Gallery</li>
-                <li id="signin">Sign in</li>
+            </ul>
+            <ul id="loginBar">
+              <li id="signin">Sign in</li>
             </ul>
         </div>
     </div>
 </div>
+
 <router-outlet></router-outlet>
+
+<div id="creds">
+  <span>&copy; Cancercell corporation, 2020</span>
+</div>

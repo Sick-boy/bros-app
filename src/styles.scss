@@ -3,16 +3,26 @@ $type-font-secondary: "Montserrat", sans-serif;
 $type-color-primary: #1d1d1d;
 $type-color-inverse: #ffe6e6;
 $type-color-highlight: #e3404c;
+$color-border-primary: rgba(255,255,255,.16);
+
+@mixin header-text {
+  font-family: $type-font-secondary;
+  color: $type-color-inverse;
+  text-shadow: -4px 4px 0px #ff6161;
+  margin: 0;
+}
 
 body,
 html {
+    background-color: #1e2e2e;
     margin: 0;
     padding: 0;
     color: $type-color-primary;
+    font-family: $type-font-primary;
 }
 
 #headerBar {
-  -webkit-animation: header-shadow  10s infinite linear;
+  animation: header-shadow  10s infinite linear;
   background-color: #1d1d1d;
   height: 80px;
   z-index: 2;
@@ -20,10 +30,12 @@ html {
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.64);
 
     #header {
-        display: flex;
+        display: grid;
+        grid-template-columns: auto 1fr 1fr;
     }
 
-    #navBar {
+    #navBar,
+    #loginBar {
         display: inline-flex;
         margin: 0;
         height: 80px;
@@ -36,17 +48,34 @@ html {
             padding: 0 10px;
             color: $type-color-inverse;
             cursor: pointer;
-            transition: color .2s linear;
+            transition: all .2s linear;
+            outline: none;
             &:hover {
-              color:  $type-color-highlight;
+              color: $type-color-highlight;
             }
         }
     }
+  #loginBar {
+    justify-self: end;
+
+    #signin {
+        border: 3px solid #fff;
+        padding: 15px;
+        border-image-source: linear-gradient(to left, #009ae9, #91498e);
+        border-image-slice: 1;
+        &:hover {
+          color: $type-color-inverse;
+          filter: hue-rotate(-56deg);
+        }
+    }
+  }
 }
 
 .centrifier {
+    max-width: 100%;
     width: 1200px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 #logo {
@@ -55,6 +84,16 @@ html {
     font-size: 32px;
     color: #000;
     text-decoration: none;
+}
+
+#creds {
+  color:  $type-color-inverse;
+  opacity: .9;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  font-size: 12px;
+  pointer-events: none;
 }
 
 @keyframes header-shadow {
