@@ -1,7 +1,8 @@
 $type-font-primary: "Roboto", Arial, sans-serif;
 $type-font-secondary: "Montserrat", sans-serif;
 $type-color-primary: #1d1d1d;
-
+$type-color-inverse: #ffe6e6;
+$type-color-highlight: #e3404c;
 
 body,
 html {
@@ -11,24 +12,34 @@ html {
 }
 
 #headerBar {
-    box-shadow: 0 0 10px rgba(0,0,0,.6);
-    background-color: #f2f9f7;
+  -webkit-animation: header-shadow  10s infinite linear;
+  background-color: #1d1d1d;
+  height: 80px;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.64);
 
     #header {
         display: flex;
-        align-items: center;
-        height: 40px;
     }
-    
+
     #navBar {
         display: inline-flex;
         margin: 0;
+        height: 80px;
+        align-items: center;
         list-style: none;
 
         li {
             font-family: $type-font-primary;
             font-weight: bold;
             padding: 0 10px;
+            color: $type-color-inverse;
+            cursor: pointer;
+            transition: color .2s linear;
+            &:hover {
+              color:  $type-color-highlight;
+            }
         }
     }
 }
@@ -44,4 +55,18 @@ html {
     font-size: 32px;
     color: #000;
     text-decoration: none;
+}
+
+@keyframes header-shadow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.64);
+  } 25% {
+    box-shadow: 0 0 10px rgba(0, 28, 255, 0.64);
+  } 50% {
+    box-shadow: 0 0 10px rgba(0, 255, 31, 0.64);
+  } 75% {
+     box-shadow: 0 0 10px rgba(255, 240, 0, 0.64);
+  } 100% {
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.64);
+  }
 }

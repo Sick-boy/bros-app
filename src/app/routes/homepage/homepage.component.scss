@@ -1,21 +1,21 @@
 @import "src/styles.scss";
 
 #main-page {
-    height: calc(100vh - 40px);
-    background: url('/assets/img/gg.png') no-repeat;
-    background-size: cover;
+    height: calc(100vh - 80px);
+    background: url('/assets/img/pat.png'), url('/assets/img/gg.jpg') no-repeat;
+    background-size: auto, cover;
     position: relative;
-    // filter: grayscale(50%) saturate(0.25) sepia(.7);
 
     h1 {
         font-family: $type-font-secondary;
         display: block;
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 85px;
-        color: #ffe6e6;
+        color: $type-color-inverse;
         text-shadow: -4px 4px 0px #ff6161;
+        margin: 0;
     }
 }
