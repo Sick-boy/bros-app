@@ -1,14 +1,23 @@
 <div id="headerBar">
     <div class="centrifier">
         <div id="header">
-            <a href="#" id="logo">[BRO]</a>
+            <a routerLink="home" id="logo">
+              <img src="/assets/img/logo.png" alt="logo" width="160">
+            </a>
             <ul id="navBar">
-                <li>BRODI</li>
-                <li>GULYAI</li>
-                <li>PO GIZNI</li>
-                <li>LOGIN</li>
+                <li id="/home" routerLink="home">Home</li>
+                <li id="/social" routerLink="social">Social</li>
+                <li id="gallery">Gallery</li>
+            </ul>
+            <ul id="loginBar">
+              <li id="signin">Sign in</li>
             </ul>
         </div>
     </div>
 </div>
+
 <router-outlet></router-outlet>
+
+<div id="creds">
+  <span>&copy; Cancercell corporation, 2020</span>
+</div>

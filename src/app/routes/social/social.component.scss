@@ -1,0 +1,28 @@
+@import "src/styles.scss";
+
+.header-text {
+  @include header-text;
+  text-align: center;
+  margin-top: 50px;
+  padding: 0 0 15px 0;
+  border-bottom: 2px solid $color-border-primary;
+}
+
+#social-wrapper {
+  margin-top: 100px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto;
+
+  a {
+    margin: 0 40px;
+
+    img {
+      transition: all .2s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+}
