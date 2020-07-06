@@ -7,6 +7,7 @@ import { HomepageComponent } from './routes/homepage/homepage.component';
 import { SocialComponent } from './routes/social/social.component';
 import { ComingSoonComponent } from './routes/coming-soon/coming-soon.component';
 import { AboutComponent } from './routes/about/about.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { AboutComponent } from './routes/about/about.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
