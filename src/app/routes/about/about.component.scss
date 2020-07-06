@@ -1,0 +1,7 @@
+@import "src/styles.scss";
+
+iframe {
+  border: none;
+  border-top: 2px solid $color-border-primary;
+  margin-top: 30px;
+}

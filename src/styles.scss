@@ -4,6 +4,8 @@ $type-color-primary: #1d1d1d;
 $type-color-inverse: #ffe6e6;
 $type-color-highlight: #e3404c;
 $color-border-primary: rgba(255,255,255,.16);
+$color-bg-primary: #1e2e2e;
+$color-bg-page: #dfeae7;
 
 @mixin header-text {
   font-family: $type-font-secondary;
@@ -14,11 +16,15 @@ $color-border-primary: rgba(255,255,255,.16);
 
 body,
 html {
-    background-color: #1e2e2e;
+    background-color: $color-bg-primary;
     margin: 0;
     padding: 0;
     color: $type-color-primary;
     font-family: $type-font-primary;
+}
+
+.page-wrapper {
+  background-color: $color-bg-page;
 }
 
 #headerBar {
