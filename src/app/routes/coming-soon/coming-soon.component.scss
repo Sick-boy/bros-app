@@ -1,0 +1,6 @@
+@import "src/styles.scss";
+
+h1 {
+  @include header-text;
+  margin-top: 100px;
+}
